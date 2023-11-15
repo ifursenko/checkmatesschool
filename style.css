@@ -1,7 +1,7 @@
 body {
     color: #000;
     font-family: Inter, sans-serif;
-    font-size: 20px;
+    font-size: 1vh;
     font-style: normal;
     font-weight: 500;
     line-height: 137.023%; /* 27.405px */
@@ -12,8 +12,17 @@ body {
 .header {
     width: 100%;
     height: 700px;
-    background: #FFF8ED;
     padding: 20px 0;
+    background-size: 70vw 70vh;
+    background: url("assets/background.png") no-repeat center;
+}
+
+.elephant {
+    width: 100%;
+    background-size: 70vw 70vh;
+    height: 700px;
+    background: url("assets/elephant.png") no-repeat center;
+    position: absolute;
 }
 
 .header__primary {
@@ -41,6 +50,7 @@ body {
     height: 3vh;
     flex-direction: row;
     align-items: center;
+    align-self: center;
 }
 
 .header__number-text {
@@ -48,10 +58,14 @@ body {
     font-family: Inter, sans-serif;
     font-size: 20px;
     font-style: normal;
-    font-weight: 500;
-    line-height: 137.023%; /* 27.405px */
-    letter-spacing: -0.5px;
-    height: 100%;
+    font-weight: 700;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+
+.header__number-whatsapp {
+    width: 40px;
+    height: 40px;
 }
 
 .container {
