@@ -10,19 +10,25 @@ body {
 }
 
 .header {
-    width: 100%;
     height: 700px;
     padding: 20px 0;
-    background-size: 70vw 70vh;
-    background: url("assets/background.png") no-repeat center;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100vw 100%; /* Современные браузеры */
+    background-image: url("assets/10026.jpg");
+    background-repeat: no-repeat;
+    background-color: #FFF8ED;
 }
 
 .elephant {
-    width: 100%;
-    background-size: 70vw 70vh;
-    height: 700px;
-    background: url("assets/elephant.png") no-repeat center;
     position: absolute;
+    height: 90vh;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
 }
 
 .header__primary {
@@ -66,6 +72,406 @@ body {
 .header__number-whatsapp {
     width: 40px;
     height: 40px;
+}
+
+.header__secondary {
+    margin-top: 250px;
+    width: 578px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-text {
+    color: #F90;
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    height: 32px;
+}
+
+.lower-text {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    height: 32px;
+}
+
+.signup-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 20px;
+    z-index: 2;
+}
+
+.signup-btn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.about {
+    height: auto;
+}
+
+.about__header {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 140px 0 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.about__card {
+    width: 600px;
+    height: 250px;
+    background: #FFF8ED;
+    border: 2px solid black;
+    border-radius: 50px;
+    display: flex;
+    padding: 24px 34px;
+    text-align: center;
+}
+
+.about__card__description {
+    display: flex;
+    align-items: center;
+}
+
+.about__card__description-header {
+    font-size: 24px;
+    font-weight: 700;
+    display: none;
+}
+
+.about__card__description-text {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.about__card-list {
+    margin-bottom: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 100px;
+}
+
+.description {
+    background: #FFF8ED;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.description__header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 80px 0;
+}
+
+.description__card {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description__card__header {
+    max-width: 1000px;
+    height: 63px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.description__card__text-upper {
+    max-width: 1000px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 20px 0 40px;
+}
+
+.description__card__text-lower {
+    max-width: 1000px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.price__header {
+    margin: 125px auto 90px;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.photo {
+    display: flex;
+    gap: 30px;
+}
+
+#img-1 {
+    width: 750px;
+    height: 440px;
+}
+
+.photo__collection > img {
+    width: 353px;
+    height: 203px;
+}
+
+.photo__collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.price__des {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 147px;
+}
+
+.price__block {
+    width: 738px;
+    height: 308px;
+    background: #FFF8ED;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.price__block_header {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 42px;
+}
+
+.price___block_price {
+    width: 100%;
+    height: 48px;
+    background: white;
+    outline: 1px solid black;
+    text-align: start;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price___block_price-des {
+    margin-left: 50px;
+}
+
+.price___block_price-new {
+    margin-right: 50px;
+}
+
+.price___block_price-old {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: line-through #FF9C00 2px;
+    margin-left: 35px;
+}
+
+footer {
+    background: #FFF8ED;
+    padding-top: 170px;
+    padding-bottom: 42px;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__header {
+    margin: 0 0 90px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.footer__info {
+    width: 450px;
+    height: 370px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.footer__info__text {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer__info__socials {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__info__socials > a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 500px) {
+    .header__secondary {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .description__card__header {
+        text-align: center;
+        line-height: normal;
+        font-size: 1rem;
+    }
+
+    .description__header {
+        line-height: normal;
+    }
+
+    .photo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photo__collection  {
+        justify-content: center;
+    }
+
+    .price__des {
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__map {
+        margin-top: 20px;
+        margin-bottom: 140px;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 0){
+    .header {
+        height: 500px;
+    }
+    .header__logo {
+        z-index: 2;
+        justify-content: center;
+        width: 100%;
+    }
+    .header__number {
+        display: none;
+    }
+    .header__secondary {
+        align-items: center;
+        margin-top: 100px;
+        width: 100%;
+        text-align: center;
+    }
+    .upper-text  {
+        font-size: 1.5rem;
+        line-height: normal;
+        height: auto;
+    }
+    .lower-text {
+        font-size: 1.5rem;
+        line-height: normal;
+        height: auto;
+    }
+    .about__card__description-text {
+        font-size: 0.8rem;
+    }
+    .description__card > img {
+        display: none;
+    }
+    .description__card > div {
+        margin-bottom: 10px;
+
+    }
+    .description__header {
+        font-size: 2rem;
+        line-height: normal;
+    }
+    .description__card__header {
+        font-size: 1rem;
+        text-align: center;
+        line-height: normal;
+    }
+    .price__header {
+        font-size: 2rem;
+        line-height: normal;
+    }
+    .photo {
+        flex-direction: column;
+        align-items: center;
+    }
+    #img-1 {
+        width: 353px;
+        height: 203px;
+    }
+    .price__des {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .price___block_price-des {
+        margin: 0 0 0 5px;
+        font-size: 1rem;
+        line-height: normal;
+    }
+    .price___block_price-new {
+        margin: 0;
+        text-wrap: nowrap;
+    }
+    .price___block_price-old {
+        margin: 0 5px 0 0;
+    }
+    .footer__container {
+        flex-direction: column;
+    }
+    iframe {
+        width: 300px;
+        height: 200px;
+    }
+    .footer__info {
+        width: auto;
+        justify-content: center;
+        gap: 30px;
+    }
+    .elephant {
+        width: 300px;
+    }
 }
 
 .container {
