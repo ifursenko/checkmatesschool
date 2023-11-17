@@ -24,8 +24,8 @@ body {
 .elephant {
     position: absolute;
     height: 90vh;
-    top: 30%;
-    left: 50%;
+    top: 40%;
+    left: 70%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
     z-index: 0;
@@ -41,6 +41,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
+    z-index: 2;
 }
 
 .header__logo-text {
@@ -225,11 +226,14 @@ body {
 .photo {
     display: flex;
     gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#img-1 {
-    width: 750px;
-    height: 440px;
+.img {
+    width: 400px
 }
 
 .photo__collection > img {
@@ -290,7 +294,11 @@ body {
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
-    text-decoration: line-through #FF9C00 2px;
+    text-decoration-line: line-through;
+    -webkit-text-decoration-line: line-through;
+    text-decoration-color: #FF9C00 ;
+    -webkit-text-decoration-color: #FF9C00;
+    -moz-text-decoration-color: #FF9C00;
     margin-left: 35px;
 }
 
@@ -343,6 +351,29 @@ footer {
         flex-direction: column;
         align-items: center;
         width: 100%;
+    }
+
+.elephant { 
+    top: 30%;
+    left: 50%;
+}
+
+    .img {
+        width: 700px;
+    }
+
+    .upper-text {
+        font-size: 1.5rem;
+        line-height: normal;
+        height: auto;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    
+    .lower-text {
+        font-size: 1.5rem;
+        line-height: normal;
+        height: auto;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
     }
 
     .description__card__header {
@@ -404,14 +435,26 @@ footer {
         font-size: 1.5rem;
         line-height: normal;
         height: auto;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
     }
     .lower-text {
         font-size: 1.5rem;
         line-height: normal;
         height: auto;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    }
+    .signup-btn {
+        margin-top: 100px;
+    }
+    .about__card {
+        align-items: center;
+    }
+    .about__card > img {
+        width: 40%;
+        height: 60%;
     }
     .about__card__description-text {
-        font-size: 0.8rem;
+        font-size: 1.1rem;
     }
     .description__card > img {
         display: none;
@@ -437,9 +480,9 @@ footer {
         flex-direction: column;
         align-items: center;
     }
-    #img-1 {
-        width: 353px;
-        height: 203px;
+    .img {
+        width: 300px;
+        height: 250px;
     }
     .price__des {
         flex-wrap: wrap;
@@ -471,6 +514,9 @@ footer {
     }
     .elephant {
         width: 300px;
+        height: auto;
+        top: 30%;
+        left: 50%;
     }
 }
 
